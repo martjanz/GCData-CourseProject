@@ -87,3 +87,7 @@ means <- aggregate(data[,1:79], list(data$activity, data$subject), mean)
 # Rename group columns
 colnames(means)[1] <- "activity"
 colnames(means)[2] <- "subject"
+
+write.table(means,
+            "../means.csv",
+            row.names = FALSE)
